@@ -30,7 +30,7 @@ export default function Profile() {
                 setTweets(data.tweets)
             });
 
-        fetch(`http://127.0.0.1:8000/user/${id}/follows`)
+        fetch(`/user/${id}/follows`)
             .then((response) => {
                 if (response.status === 404) {
                     setNotFound(true)
@@ -49,7 +49,7 @@ export default function Profile() {
 
 
     const setUserFollowing = () => {
-        fetch(`http://127.0.0.1:8000/user/${id}/following`)
+        fetch(`/user/${id}/following`)
             .then((response) => {
                 if (response.status === 404) {
                     setNotFound(true)
@@ -64,7 +64,7 @@ export default function Profile() {
 
     const followUser = (e) => {
         e.preventDefault();
-        fetch(`http://127.0.0.1:8000/follow/${id}`)
+        fetch(`/follow/${id}`)
             .then((response) => {
                 if (response.status === 404) {
                     setNotFound(true)
@@ -82,7 +82,7 @@ export default function Profile() {
 
     const unfollowUser = (e) => {
         e.preventDefault();
-        fetch(`http://127.0.0.1:8000/unfollow/${id}`)
+        fetch(`/unfollow/${id}`)
             .then((response) => {
                 if (response.status === 404) {
                     setNotFound(true)

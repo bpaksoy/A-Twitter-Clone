@@ -14,7 +14,7 @@ export default function Following(props) {
     const [tweetsByFollowedUsers, setTweetsByFollowedUsers] = useState([])
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/user/${id}/followed_users`)
+        fetch(`/user/${id}/followed_users`)
             .then((response) => {
                 if (response.status === 404) {
                     setNotFound(true);
@@ -31,7 +31,7 @@ export default function Following(props) {
     }, [id])
 
     const fetchData = async () => {
-        const url = "http://127.0.0.1:8000/api/profile";
+        const url = "/api/profile";
         const response = await axios.get(url,
             { 'withCredentials': true });
         const profile = response.data;

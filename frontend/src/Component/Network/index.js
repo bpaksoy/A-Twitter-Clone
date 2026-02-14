@@ -34,7 +34,7 @@ export default function Network() {
     }, []);
 
     const setCSRF = async () => {
-        let csrfURL = "http://127.0.0.1:8000/api/setcsrf";
+        let csrfURL = "/api/setcsrf";
         const response = await axios.get(csrfURL);
     }
 
@@ -47,7 +47,7 @@ export default function Network() {
 
     const listTweetView = async (page) => {
         // console.log("Page in listTweetView", page);
-        let apiListTweetURL = `http://127.0.0.1:8000/api/list?page=${page}`;
+        let apiListTweetURL = `/api/list?page=${page}`;
         const response = await axios.get(apiListTweetURL);
         setListTweets(response.data);
     }
@@ -64,7 +64,7 @@ export default function Network() {
 
 
     const fetchData = async () => {
-        const url = "http://127.0.0.1:8000/api/profile";
+        const url = "/api/profile";
         const response = await axios.get(url,
             { 'withCredentials': true });
         const user = response.data;
@@ -128,7 +128,7 @@ export default function Network() {
     }
 
     const likeTweet = async (tweet_id) => {
-        const url = "http://127.0.0.1:8000/likes";
+        const url = "/likes";
         await axios.post(url, {
             tweet_id: tweet_id
         })

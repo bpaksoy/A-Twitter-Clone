@@ -1,8 +1,0 @@
-# This project runs on the same server for the front and back end
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
-### `npm run build`
-
-To make changes on the front-end run the "npm run build" command and start the server again

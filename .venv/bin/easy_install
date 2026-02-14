@@ -1,4 +1,4 @@
-#!/Users/banupaksoy/Desktop/CS50/project4/.venv/bin/python3
+#!/Users/banupaksoy/Desktop/A-Twitter-Clone/.venv/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys
